@@ -1,0 +1,55 @@
+h1, h2 {
+    text-align: center;
+}
+h3 {
+    text-align: center;
+}
+p {
+    text-align: center;
+}
+body {
+    background-color: greenyellow;
+}
+
+a {
+    padding-right: 10px;
+    color: green;
+  }
+  
+  #inlineLink {
+    color: blue;
+  }
+  .deltaVHome {
+    padding-right: 30px;
+    color: orange;
+  }
+  
+  .deltaVHome {
+    color: magenta;
+  }
+  
+  sup {
+    font-size: 6pt;
+    font-style: normal;
+  }
+  section strong {
+    color: red;
+  }
+  
+  .box-model {
+    padding: 30px 15px;
+    margin: 50px 100px;
+    border-color: black;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 15px;
+  }
+  
+  .circle {
+    background: green;
+    height: 300px;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    line-height:  300px;
+  }
