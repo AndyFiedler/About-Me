@@ -18,6 +18,24 @@ var answer = question.toUpperCase().trim();
 if (answer === "YES" || answer === "Y") {
   alert("Answer: " + '"' + answer + '"' + ", Is not correct!  Sushi is my favorite, but I won't turn down free pizza!")
 } else if (answer === "NO" || answer === "N") {
-  alert("Answer: " + '"' + answer + '"' + " Is correct, sushi is my favorite, but of course I like pizza.  Especially when it is free!")
+  alert("Answer: " + '"' + answer + '"' + " Is correct, sushi is my favorite, but of course I like pizza, especially when it is free!")
+}
+
+var question = prompt("Question: 3 " + name + ", do you think Freeman enjoys snowboarding?");
+var answer = question.toUpperCase().trim();
+
+if (answer === "YES" || answer === "Y") {
+  alert("Answer: " + '"' + answer + '"' + ", That is correct!  I enjoy snowboarding.")
+} else if (answer === "NO" || answer === "N") {
+  alert("Answer: " + '"' + answer + '"' + " Is incorrect!  I enjoy snowboarding.")
+}
+
+var question = prompt("Question: 4 " + name + ", do you think Freeman once has a pet deer?");
+var answer = question.toUpperCase().trim();
+
+if (answer === "YES" || answer === "Y") {
+  alert("Answer: " + '"' + answer + '"' + ", Is correct, I had a pet deer!  He had tags and papers, so he was completely legal.")
+} else if (answer === "NO" || answer === "N") {
+  alert("Answer: " + '"' + answer + '"' + " Is incorrect, I had a pet deer!  He had tags and papers, so he was completely legal.")
 }
 
