@@ -1,6 +1,6 @@
 'use strict';
 
-
+/*
 var name = prompt("What is your name?");
 var question = prompt("Hello " + name + "!!  " + "Question: 1, " +
     "Do you think Freeman plays the piano?");
@@ -46,4 +46,36 @@ if (answer === "YES" || answer === "Y") {
   alert("Answer: " + '"' + answer + '"' + ", Is incorrect!  While I can juggle, I can not juggle while riding a unicycle.")
 } else if (answer === "NO" || answer === "N") {
   alert("Answer: " + '"' + answer + '"' + " Is correct!  I can juggle, but not while I ride a unicycle.")
+}
+*/
+
+
+var guessCount = 0;
+var promptWarning = "Incorrect!";
+
+while (guess !== "7" && guessCount < 7 ) {
+
+if (guess === null) {
+    console.log("You canceled out of: What is my favorite number?");
+    break;
+  }  
+  var guess = prompt("What is my favorite number?");
+  console.log("guess is: " + guess);
+
+
+if (guess > 7) {
+      promptWarning = "To high!!"
+  } else if (guess < 0) {
+      promptWarning = "It is not a negative number";
+  } else {
+      promptWarning = "To low!!"; 
+  }
+
+  guessCount++;
+  console.log(promptWarning);
+console.log(guessCount);
+}
+
+if (guessCount >= 7) {
+  alert("You guessed to many times!");
 }
