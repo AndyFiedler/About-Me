@@ -39,3 +39,11 @@ if (answer === "YES" || answer === "Y") {
   alert("Answer: " + '"' + answer + '"' + " Is incorrect, I had a pet deer!  He had tags and papers, so he was completely legal.")
 }
 
+var question = prompt("Question: 5 " + name + ", do you think Freeman can juggle while riding a unicycle?");
+var answer = question.toUpperCase().trim();
+
+if (answer === "YES" || answer === "Y") {
+  alert("Answer: " + '"' + answer + '"' + ", Is incorrect!  While I can juggle, I can not juggle while riding a unicycle.")
+} else if (answer === "NO" || answer === "N") {
+  alert("Answer: " + '"' + answer + '"' + " Is correct!  I can juggle, but not while I ride a unicycle.")
+}
