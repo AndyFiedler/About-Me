@@ -1,4 +1,4 @@
-h1, h2 {
+h1, h2, h4 {
     text-align: center;
 }
 h3 {
@@ -9,6 +9,9 @@ p {
 }
 body {
     background-color: rgb(214, 211, 161);
+}
+h3.leftSide {
+  text-align: left;
 }
 
 a {

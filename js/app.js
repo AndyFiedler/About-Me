@@ -1,6 +1,6 @@
 'use strict';
 
-/*
+
 var name = prompt("What is your name?");
 var question = prompt("Hello " + name + "!!  " + "Question: 1, " +
     "Do you think Freeman plays the piano?");
@@ -30,7 +30,7 @@ if (answer === "YES" || answer === "Y") {
   alert("Answer: " + '"' + answer + '"' + " Is incorrect!  I enjoy snowboarding.")
 }
 
-var question = prompt("Question: 4 " + name + ", do you think Freeman once has a pet deer?");
+var question = prompt("Question: 4 " + name + ", do you think Freeman once had a pet deer?");
 var answer = question.toUpperCase().trim();
 
 if (answer === "YES" || answer === "Y") {
@@ -47,35 +47,62 @@ if (answer === "YES" || answer === "Y") {
 } else if (answer === "NO" || answer === "N") {
   alert("Answer: " + '"' + answer + '"' + " Is correct!  I can juggle, but not while I ride a unicycle.")
 }
-*/
 
 
-var guessCount = 0;
-var promptWarning = "Incorrect!";
 
-while (guess !== "7" && guessCount < 7 ) {
+ var guessCount = 0;
+ var promptWarning = "Incorrect!";
 
-if (guess === null) {
-    console.log("You canceled out of: What is my favorite number?");
-    break;
-  }  
-  var guess = prompt("What is my favorite number?");
-  console.log("guess is: " + guess);
+ while (guess !== "7" && guessCount < 4 ) {
+
+ if (guess === null) {
+     console.log("You canceled out of: What is Freeman's favorite number?");
+     break;
+   }  
+   var guess = prompt("What is Freeman's favorite number?");
+   console.log("guess is: " + guess);
+
+ if (guess > 7) {
+       promptWarning = "To high!!"
+   } else if (guess < 0) {
+       promptWarning = "It is not a negative number";
+   } else if (guess < 7) {
+       promptWarning = "To low!!"; 
+   } else {
+     alert("You guessed correctly!");
+   }
+
+   guessCount++;
+   console.log(promptWarning);
+   console.log(guessCount);
+ }
+
+ if (guessCount >= 4) {
+   alert("You guessed to many times!  Answer is 7!");
+} 
 
 
-if (guess > 7) {
-      promptWarning = "To high!!"
-  } else if (guess < 0) {
-      promptWarning = "It is not a negative number";
-  } else {
-      promptWarning = "To low!!"; 
-  }
 
-  guessCount++;
-  console.log(promptWarning);
-console.log(guessCount);
-}
 
-if (guessCount >= 7) {
-  alert("You guessed to many times!");
-}
+
+
+// var correctCount = 0;
+// var countries = ["America", "Canada", "Mexico", "Bahamas", "Costa Rica", "France", 
+// "England", "Germany", "Poland", "Croatia", "Slovenia", "Austria", "Ghana", "ToGo", 
+// "Niger", "Taiwan", "Malaysia", "Singapore"];
+// var guess = prompt("Guess a country Freeman has been to!")
+
+// while (guessCount < 6 ) {
+
+// if (countries.includes(guess)) {
+//   correctCount++;
+//   correctCountries.push(guess);
+// }
+
+// if (guess === null) {
+//   console.log("You canceled out of: What countries have I been to?");
+//   break;
+// }  
+// var guess = prompt("What countries has Freeman been to?");
+// console.log("guess is: " + guess);
+// }
