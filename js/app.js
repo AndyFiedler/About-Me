@@ -1,17 +1,39 @@
 'use strict';
 
-/*
-var name = prompt("What is your name?");
-var question = prompt("Hello " + name + "!!  " + "Question: 1, " +
-    "Do you think Freeman plays the piano?");
-var answer = question.toUpperCase().trim();
 
-if (answer === "YES" || answer === "Y") {
-  alert(answer + ", That is correct, well at least I use to.")
-} else if (answer === "NO" || answer === "N") {
-  alert(answer + ", I don't currently play much, but I use to.")
+var name = prompt("What is your name?");
+
+
+
+var userName = name;
+var correctAnswer = 0;
+var questionNumber = 0;
+
+function askQuestion(questionText, correctWord, correctMessage, incorrectMessage) {
+  questionNumber++;
+  
+  var correctLetter = correctWord[0];
+
+  var answer = question.toUpperCase().trim();
+
+if (answer === correctWord || answer === correctLetter) {
+  alert(answer + name + ", That is correct, well at least I use to.");
+} else {
+  alert(incorrectMessage + answer + name + ", I don't currently play much, but I use to.");
 }
 
+console.log("User response is " + answer + " to question" + questionNumber + "." );
+}
+
+var questionText = prompt("Hello " + name + "!!  " + "Question: 1, " +
+    "Do you think Freeman plays the piano?");
+var correctWord = "Yes";
+var correctMessage = "Correct!";
+var incorrectMessage = "WRONG!";
+
+askQuestion("1", "2", "3", "4");
+
+/*
 var question = prompt("Question: 2 " + name + ", do you think Freeman's favorite food is pizza?");
 var answer = question.toUpperCase().trim();
 
@@ -80,9 +102,9 @@ if (answer === "YES" || answer === "Y") {
  if (guessCount >= 4) {
    alert("You guessed to many times!  Answer is 7!");
 } 
-
-
 */
+
+
 
 
 //Question 7 does not work
@@ -114,7 +136,7 @@ if (answer === "YES" || answer === "Y") {
   
  }
 
-*/
+
 
 
 var countryCount = 0;
@@ -150,3 +172,4 @@ if (guess === countries) {
 if (countryCount >= 6) {
   alert("You guessed to many times!  Answers are " + countries);
 } 
+*/
