@@ -46,6 +46,7 @@ a {
     border-width: 5px;
     border-style: solid;
     border-radius: 15px;
+    background: rgb(155, 114, 67);
   }
   
   .circle {
@@ -57,4 +58,12 @@ a {
     text-align: center;
     line-height:  300;
     align-self: right;
+  }
+
+  aside {
+    width: 25%;
+    border: solid 3px red;
+    box-sizing: border-box;
+    float: right;
+
   }

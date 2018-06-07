@@ -1,6 +1,6 @@
 'use strict';
 
-
+/*
 var name = prompt("What is your name?");
 var question = prompt("Hello " + name + "!!  " + "Question: 1, " +
     "Do you think Freeman plays the piano?");
@@ -82,31 +82,71 @@ if (answer === "YES" || answer === "Y") {
 } 
 
 
+*/
 
 
+//Question 7 does not work
 
-
+/*
  var correctCount = 0;
  var countries = ["America", "Canada", "Mexico", "Bahamas", "Costa Rica", "France", 
     "England", "Germany", "Poland", "Croatia", "Slovenia", "Austria", "Ghana", "ToGo", 
     "Niger", "Taiwan", "Malaysia", "Singapore"];
- var guess = prompt("Guess a country Freeman has been to!")
+ var guess = prompt("Guess a country Freeman has been to!");
 
- while (correctCount < 6 ) {
+ while (correctCount < 7 ) {
+
+
+  if (guess === null) {
+    console.log("You canceled out of: What countries have I been to?");
+    break;
+  }  
+
 
   if (countries.includes(guess)) {
-    Countries.push(guess);
+    countries.push(guess);
     correctCount++;
   }
 
   var guess = prompt("What countries has Freeman been to?");
   console.log("guess is: " + guess);
 
-  if (guess === null) {
-    console.log("You canceled out of: What countries have I been to?");
-    break;
-  }  
+  
  }
 
+*/
 
 
+var countryCount = 0;
+var promptWarning = "Incorrect!";
+var countries = ["America ", "Canada ", "Mexico ", "Bahamas ", "Costa Rica ", "France ", 
+    "England", "Germany ", "Poland ", "Croatia ", "Slovenia ", "Austria ", "Ghana ", "ToGo ", 
+    "Niger ", "Taiwan ", "Malaysia ", "Singapore "];
+
+while (guess !== countries && countryCount < 6 ) {
+
+if (guess === null) {
+    console.log("You canceled out of: What countries has Freeman been to?");
+    break;
+  }  
+  var guess = prompt("What countries has Freeman been to?");
+  console.log("guess is: " + guess);
+
+if (guess === countries) {
+      promptWarning = "That is correct!!"
+  } else if (guess < 0) {
+      promptWarning = "It is not a negative number";
+  } else if (guess < 7) {
+      promptWarning = "To low!!"; 
+  } else {
+    alert("some text!");
+  }
+
+  countryCount++;
+  console.log(promptWarning);
+  console.log(countryCount);
+}
+
+if (countryCount >= 6) {
+  alert("You guessed to many times!  Answers are " + countries);
+} 
