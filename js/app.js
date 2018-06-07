@@ -86,23 +86,27 @@ if (answer === "YES" || answer === "Y") {
 
 
 
-// var correctCount = 0;
-// var countries = ["America", "Canada", "Mexico", "Bahamas", "Costa Rica", "France", 
-// "England", "Germany", "Poland", "Croatia", "Slovenia", "Austria", "Ghana", "ToGo", 
-// "Niger", "Taiwan", "Malaysia", "Singapore"];
-// var guess = prompt("Guess a country Freeman has been to!")
+ var correctCount = 0;
+ var countries = ["America", "Canada", "Mexico", "Bahamas", "Costa Rica", "France", 
+    "England", "Germany", "Poland", "Croatia", "Slovenia", "Austria", "Ghana", "ToGo", 
+    "Niger", "Taiwan", "Malaysia", "Singapore"];
+ var guess = prompt("Guess a country Freeman has been to!")
 
-// while (guessCount < 6 ) {
+ while (correctCount < 6 ) {
 
-// if (countries.includes(guess)) {
-//   correctCount++;
-//   correctCountries.push(guess);
-// }
+  if (countries.includes(guess)) {
+    Countries.push(guess);
+    correctCount++;
+  }
 
-// if (guess === null) {
-//   console.log("You canceled out of: What countries have I been to?");
-//   break;
-// }  
-// var guess = prompt("What countries has Freeman been to?");
-// console.log("guess is: " + guess);
-// }
+  var guess = prompt("What countries has Freeman been to?");
+  console.log("guess is: " + guess);
+
+  if (guess === null) {
+    console.log("You canceled out of: What countries have I been to?");
+    break;
+  }  
+ }
+
+
+

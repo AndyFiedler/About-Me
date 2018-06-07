@@ -42,7 +42,7 @@ a {
   .box-model {
     padding: 30px 15px;
     margin: 50px 100px;
-    border-color: black;
+    border-color: rgb(209, 131, 41);
     border-width: 5px;
     border-style: solid;
     border-radius: 15px;
